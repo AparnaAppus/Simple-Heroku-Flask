@@ -14,16 +14,7 @@ def index():
 @app.route('/asset/<assetType>')
 def about(assetType):
     data = {}
-    data2 = {}
-    data3 = {}
-    data4 = {}
-    data5 = {}
-    data6 = {}
-    data7 = {}
-    data8 = {}
-    data9 = {}
-    data10 = {}
-
+    tagdata = {}
 
     if assetType=='assettag':
       cur.execute("select * from sensorassetlist where category = 'assetTag'");
@@ -62,14 +53,18 @@ def about(assetType):
       data['links']=links
 
       allVals = []
-      tagdata = {}
+
       data["name1"]="Sensor List"
 
       for assets in vals:
           astag = {}
-          astag['imgs'] = assets[12]
+
+          astag['imgs'] = assets[13]
           astag['names'] = assets[1]
           astag['descrp'] = assets[2]
+          astag['ref'] = assets[3]
+          astag['procure'] = assets[4]
+
           allVals.append(astag)
           tagdata['allVals']=allVals
 
@@ -117,14 +112,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -153,14 +152,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -208,14 +211,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -243,14 +250,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -294,14 +305,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -325,14 +340,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -364,14 +383,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -403,14 +426,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -438,14 +465,18 @@ def about(assetType):
         data['links']=links
 
         allVals = []
-        tagdata = {}
+
         data["name1"]="Sensor List"
 
         for assets in vals:
             astag = {}
-            astag['imgs'] = assets[12]
+
+            astag['imgs'] = assets[13]
             astag['names'] = assets[1]
             astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
             allVals.append(astag)
             tagdata['allVals']=allVals
 
@@ -464,9 +495,6 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
-
-
-
 
 @app.route('/storeBalance/<bal>')
 def storeData(bal):

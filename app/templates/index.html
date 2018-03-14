@@ -49,18 +49,19 @@ form.example::after {
 }
 </style>
 </head>
-<body id="top" class="bgded fixed" style="background-image:url('/static/images/demo/backgrounds/backgr.jpg');">
+<body id="top" class="bgded fixed" style="background-image:url('/static/img/demo/backgrounds/backgr.jpg');">
 
-<div class="wrapper row1">
+<div class="wrapper row1" style="color:#95C4F7">
   <header id="header" class="clear">
     <div id="logo" class="fl_left">
-      <h1><a href="index.html"><font face = "Comic sans MS" size ="6"><em>S</em>ensor<em>D</em>irectory</font></a></h1>
+      <h1><a href="/"><font face = "Comic sans MS" size ="6"><em>S</em><em>ensors</em><em>&</em><em>A</em>ctuators<em><em>D</em><em>irectory</font></a></h1>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <font face = "Comic sans MS" size ="2">
-        <li class="active" ><a href="index.html">Home</a></li>
-
+        <li class="active" ><a href="/">Home</a></li>
+        <li class="drop" ><a href="#">Sensors</a>
+        <ul>
         <li ><a class="drop" href="#">Operation</a>
 
           <ul id = "asset">
@@ -79,12 +80,12 @@ form.example::after {
             <li><a href="/asset/oil">Oil and Gas Sensors</a></li>
 
             <li><a href="/asset/agri">Agriculture</a></li>
-            <li class="drop"><a href="#">Manufacturing</a>
-            <ul>
+            <!-- <li class="drop"><a href="#">Manufacturing</a>
+            <ul> -->
             <li><a href="/asset/transport">Transportation </a></li>
             <li><a href="/asset/automotive">Automotive </a></li>
-            </ul>
-            </li>
+            <!-- </ul>
+            </li> -->
             <li><a href="/asset/retail">Retails Sensors</a></li>
             <li><a href="/asset/home">Home Sensors</a></li>
             <li><a href="/asset/power">Power In Utility Sensors</a></li>
@@ -94,12 +95,35 @@ form.example::after {
 
 
       </ul>
+      </li>
+      <li class="drop" ><a href="/">Actuators</a></li>
+      <ul>
+        <li>Work on progress</li>
+      </ul>
+    </ul>
+
+
+
     </font>
     </nav>
 
 
     <!-- ################################################################################################ -->
   </header>
+
+  
+  <script>
+    (function() {
+      var cx = '017772675173943477049:uy2hgiyoly8';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+  <gcse:search></gcse:search>
   </div>
 
 
@@ -112,9 +136,11 @@ form.example::after {
     <ul class="nospace group">
       <font face = "Comic sans MS" size ="3">
 
-      <li><a class="mt-green" href="/asset/assettag"><i class="fa fa-5x fa-calculator"></i><em>Operation Sensors</em></a></li>
-      <li><a class="mt-purple" href="/asset/health"><i class="fa fa-5x fa-heartbeat"></i><em>Health Sensors</em></a></li>
-      <li><a class="mt-orange" href="/asset/energy"><i class="fa fa-5x fa-gears"></i><em>Industrial Sensors</em></a></li>
+      <link href="/static/layout/styles/layout.css" rel="stylesheet">
+      <li><a class="mt-yellow" href="/asset/assettag"><i class="fa fa-wrench faa-wrench fa-spin fa-5x"></i><em>Operation Sensors</em></a></li>
+      <li><a class="mt-orange" href="/asset/health"><i class="fa fa-heart fa-5x fa-beat"></i><em>Health Sensors</em></a></li>
+      <li><a class="mt-green" href="/asset/energy"><i class="fa fa-cog fa-spin fa-5x fa-fw"></i><em>Industrial Sensors</em></a></li>
+      <!-- <li><a class="mt-orange" href="/"><i class="fa fa-refresh fa-spin fa-2x fa-fw "></i><em></em></a></li> -->
 
 </font>
 
@@ -131,7 +157,7 @@ form.example::after {
       <!-- main body -->
       <!-- ################################################################################################ -->
       <figure class="group">
-        <div class="one_half first"><center><img src="/static/images/demo/industrial.jpg" alt=""></center></div>
+        <div class="one_half first"><center><img src="/static/img/demo/industrial.jpg" alt=""></center></div>
         <figcaption class="one_half">
           <h3 class="heading" style="color:#000000"><font face = "Times New Roman" size = "6">Industrial IoT </font></h3>
           <p align ="justify" style="color:#000000" ><font face = "Comic sans MS" size =" 3">The Industrial Internet of Things originally described the IoT (Internet of Things)
@@ -147,7 +173,7 @@ form.example::after {
 </div>
 <div class="wrapper">
   <div id="latest" class="clear">
-    <article class="article bgded clear" style="background-image:url('/static/images/demo/latest/01.jpg');">
+    <article class="article bgded clear" style="background-image:url('/static/img/demo/latest/01.jpg');">
       <div class="wrap">
         <h3 class="heading"><font face = "Times New Roman" size = "6">Fourth Industrial Revolution</font></h3>
         <time datetime="2018-28-02" style="color:#000000">Wednesday 28<sup>th</sup> Feb 2018</time>
@@ -158,7 +184,7 @@ form.example::after {
         <p><center><a class="btn mt-green" href="https://www.weforum.org/agenda/2017/12/fourth-industrial-revolution-technology-patents-internet-things-smart-object/"><font face = "Comic sans MS" size =" 3">Read this article</font></a></center></p>
       </div>
     </article>
-    <article class="article bgded clear" style="background-image:url('/static/images/demo/latest/02.jpg');">
+    <article class="article bgded clear" style="background-image:url('/static/img/demo/latest/02.jpg');">
       <div class="wrap">
         <h3 class="heading"><font face = "Times New Roman" size = "6">IoT in Healthcare</font></h3>
         <time datetime="2018-02-28" style="color:#000000">Wednesday 28<sup>th</sup> Feb 2018</time>
@@ -186,15 +212,16 @@ form.example::after {
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4 bgded">
-  <div class="lrspace overlay">
-    <footer id="footer" class="clear">
-      <!-- ################################################################################################ -->
-      <div class="one_quarter first" >
+  <div class="lrspace overlay coloured">
+    <div id="cta" class="clear center">
+
+
+    <div class="one_quarter first" >
         <h6 class="title">Company Details</h6>
         <font face = "Comic sans MS" size ="2">
 
         <address class="btmspace-15">
-        company<br>
+        <br>
         <br>
         <br>
         </address>
@@ -231,7 +258,7 @@ form.example::after {
 
       </div>
       <!-- ################################################################################################ -->
-    </footer>
+    </div>
   </div>
 </div>
 <!-- ################################################################################################ -->
@@ -243,7 +270,7 @@ form.example::after {
       <font face = "Comic sans MS" size ="2">
 
       <!-- ################################################################################################ -->
-      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="http://www.ey.com/" style="color:#000000" ></font></a></p>
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="" style="color:#000000" ></font></a></p>
       </div>
   </div>
 </div>
