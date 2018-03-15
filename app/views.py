@@ -173,39 +173,19 @@ def about(assetType):
         links = []
         data["name"]="Agriculture Sensors List"
         link = {}
-        link['val'] = 'Patient Position Sensor'
+        link['val'] = 'Optical Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Glucometer Sensor'
+        link['val'] = 'Electrochemical Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Body Temperature Sensor'
+        link['val'] = 'Dielectric Soil Moisture Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Blood Pressure Sensor'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Pulse and Oxygen in Blood Sensor'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Airflow Sensor'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Galvanic Skin Response Sensor'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Electrocardiogram Sensor'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Electromyography Sensor'
+        link['val'] = 'Soil Humidity Sensor Hygrometer AR605'
         link['href'] = "#"
         links.append(link)
         data['links']=links
