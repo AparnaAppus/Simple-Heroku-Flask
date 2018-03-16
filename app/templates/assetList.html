@@ -85,11 +85,14 @@ Licence URI: http://www.os-templates.com/template-terms
                   <nav class="sdb_holder">
                   <ul>
                   {%for x in data['links']%}
-                  <li><a href="{{x['href']}}">{{x['val']}}</a></li>
+                  <li class="active"><a href="{{x['href']}}">{{x['val']}}</a></li>
                   {% endfor %}
                   </ul>
                   </nav>
                   </font>
+
+
+
               </div>
 
             <div class="content three_quarter" style="color:#000000" >
