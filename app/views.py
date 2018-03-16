@@ -50,6 +50,10 @@ def about(assetType):
       link['val'] = 'Wifi, IR and Bluetooth'
       link['href'] = "#"
       links.append(link)
+      link = {}
+      # link['val'] = 'test'
+      # link['href'] = "#"
+      # links.append(link)
       data['links']=links
 
       allVals = []
@@ -109,6 +113,10 @@ def about(assetType):
         link['val'] = 'Electromyography Sensor'
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = 'Muscle Sensor'
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -149,6 +157,22 @@ def about(assetType):
         link['val'] = 'Vernier Energy Sensor'
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = 'PIR sensor (motion detection)'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'IR proximity sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Light sensors(LDR)'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Strain gauge'
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -186,6 +210,14 @@ def about(assetType):
         links.append(link)
         link = {}
         link['val'] = 'Soil Humidity Sensor Hygrometer AR605'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Soil moisture sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Soil Temperature and Humidity Sensor SHT20'
         link['href'] = "#"
         links.append(link)
         data['links']=links
@@ -360,6 +392,10 @@ def about(assetType):
         link['val'] = 'Fire/CO detection '
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = 'Hall effect sensor MH183 '
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -382,7 +418,7 @@ def about(assetType):
         cur.execute("select * from sensorassetlist where category = 'oil'");
         vals = cur.fetchall()
         links = []
-        data["name"]="Oil Sensors List"
+        data["name"]="Oil And Gas Sensors List"
         link = {}
         link['val'] = 'Piezoelectric Pressure Sensors'
         link['href'] = "#"
@@ -401,6 +437,22 @@ def about(assetType):
         links.append(link)
         link = {}
         link['val'] = 'Fiber Optic Sensors '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Alcohol sensor MQ3 '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Gas sensor MQ2 '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'LPG sensor MQ6 '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Pressure Sensor '
         link['href'] = "#"
         links.append(link)
         data['links']=links
@@ -462,7 +514,9 @@ def about(assetType):
 
     return render_template('assetList.html',data=data,tagdata=tagdata)
 
-
+# @app.route('/industry')
+# def industry():
+#     return render_template("industrial.html")
 
 # Webservices
 @app.route('/webhook', methods=['POST'])

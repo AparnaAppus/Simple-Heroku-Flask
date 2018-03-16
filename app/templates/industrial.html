@@ -10,7 +10,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <html>
 <head>
-    <title>SensorDirectory | Asset Tags</title>
+    <title>SensorDirectory | Industrail Sensors</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="/static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
@@ -41,7 +41,7 @@ Licence URI: http://www.os-templates.com/template-terms
               <li><a href="/asset/energy">Energy Sensors</a></li>
               <li><a href="/asset/oil">Oil and Gas Sensors</a></li>
               <li><a href="/asset/agri">Agriculture</a></li>
-              <li class="drop"><a href="#">Manufacturing</a>
+              <li class="drop fl_left"><a href="#">Manufacturing</a>
             <ul>
               <li><a href="/asset/transport">Transportation </a></li>
               <li><a href="/asset/automotive">Automotive </a></li>
@@ -65,8 +65,8 @@ Licence URI: http://www.os-templates.com/template-terms
 
                 <ul>
                   <li><a href="/">Home</a></li>
-                  <li><a href="#">Sensors</a></li>
-                  <li><a href="#">{{data['name']}}</a></li>
+                  <li><a href="#">Industrial</a></li>
+                  <!-- <li><a href="#">{{data['name']}}</a></li> -->
 
                 </ul>
               </font>
@@ -79,14 +79,22 @@ Licence URI: http://www.os-templates.com/template-terms
         <div class="lrspace">
           <main class="container clear">
             <!-- main body -->
-              <div class="sidebar one_quarter first" style="color:#117A65">
+              <div class="content three_quarter" style="color:#117A65">
                   <font face = "Comic sans MS" size ="2">
-                  <h6>{{data['name']}}</h6>
+                  <h6></h6>
                   <nav class="sdb_holder">
                   <ul>
-                  {%for x in data['links']%}
-                  <li><a href="{{x['href']}}">{{x['val']}}</a></li>
-                  {% endfor %}
+
+                  <li><a href="/asset/energy">Energy Sensors</a></li>
+                  <li><a href="/asset/oil">Oil and Gas Sensors</a></li>
+                  <li><a href="/asset/agri">Agriculture</a></li>
+                  <li><a href="/asset/transport">Transportation </a></li>
+                  <li><a href="/asset/automotive">Automotive </a></li>
+                  <li><a href="/asset/retail">Retails Sensors</a></li>
+                  <li><a href="/asset/home">Home Sensors</a></li>
+                  <li><a href="/asset/power">Power In Utility Sensors</a></li>
+
+
                   </ul>
                   </nav>
                   </font>
@@ -94,15 +102,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
             <div class="content three_quarter" style="color:#000000" >
               <font face = "Comic sans MS" size ="3">
-              <h1>{{data['name1']}}</h1><br><br>
-              {%for x in tagdata['allVals']%}
-              <img class="imgr borderedbox inspace-5" src="{{x['imgs']}}" alt="">
+              <h1>Industrial Sensors</h1><br><br>
+              <p></p>
+              <img class="imgr borderedbox inspace-5" src="" alt="">
               <font face = "Comic sans MS" size ="2">
-              <p>* {{x['names']}}</p>
+              <!-- <p>* {{x['names']}}</p>
               <p>{{x['descrp']}}</p>
               <p>Procurement Link: <a href="{{x['ref']}}" target="_blank">Click Here for Procurement Details</a></p>
               <p>Reference Link: <a href="{{x['procure']}}" target="_blank">Click Here for More Reference </a></p><br><br><br>
-              {% endfor %}
+              {% endfor %} -->
 
             </div>
 
