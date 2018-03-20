@@ -6,6 +6,7 @@ import psycopg2 as pg
 connection = pg.connect(host="ec2-54-83-23-91.compute-1.amazonaws.com",database="d85fepf5uvs059", user="sijlscnpyawdzh", password="b201ad69864dbfaaabf6ef0b55d0c2347b587f6812e1ee3ef58665657f0c71cf")
 cur = connection.cursor()
 
+
 # Web page renders
 @app.route('/')
 def index():
@@ -514,9 +515,10 @@ def about(assetType):
 
     return render_template('assetList.html',data=data,tagdata=tagdata)
 
-# @app.route('/industry')
-# def industry():
-#     return render_template("industrial.html")
+@app.route('/industry/industrial')
+def industry():
+    # print ("industrial.html")
+    return render_template('industrial.html')
 
 # Webservices
 @app.route('/webhook', methods=['POST'])
