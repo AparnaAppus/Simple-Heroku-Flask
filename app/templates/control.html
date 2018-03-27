@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+Template Name: YourChoice
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+
+
+<html>
+<head>
+    <title>Controllers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript">
+    // $('a').click(function(){
+    // $('html, body').animate({
+    //     scrollTop: $( $(this).attr('href') ).offset().top
+    // }, 500);
+    // return false;
+    // });
+  	</script>
+</head>
+
+    <body id="top" class="bgded fixed" style="background-image:url('/static/img/demo/backgrounds/controller.jpg');">
+
+    <div class="wrapper row1">
+    <header id="header" class="clear">
+    <div class="wrapper row1" style="color:#000000">
+      <header id="header" class="clear">
+      <div id="logo" class="fl_left">
+      <h1><a href="/controllerdirectory"><font face = "Comic sans MS" size ="6"><em>C</em>ontroller<em>D</em>irectory</font></a></h1>
+      </div>
+            <nav id="mainav" class="fl_right">
+            <ul class="clear">
+              <font face = "Comic sans MS" size ="2">
+              <li class="" ><a href="/">Home</a></li>
+              <li class=""><a href = "/control/controller">Controller</a></li>
+            </font>
+            </nav>
+      </header>
+    </div>
+
+        <div class="wrapper row2">
+          <div class="lrspace">
+            <div id="breadcrumb" class="clear" style="color:#000000">
+              <font face = "Comic sans MS" size ="1">
+
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/control/controller">Controller</a></li>
+                  <li><a href="#">{{data['name']}}</a></li>
+
+                </ul>
+              </font>
+
+            </div>
+          </div>
+        </div>
+
+      <div class="wrapper row3">
+        <div class="lrspace">
+          <main class="container clear">
+            <!-- main body -->
+              <div class="sidebar one_quarter first" style="color:#117A65">
+                  <font face = "Comic sans MS" size ="2">
+                  <h6>{{data['name']}}</h6>
+                  <nav class="sdb_holder">
+                  <ul>
+                  {%for x in data['links']%}
+                  <li class="active"><a href="{{x['href']}}link" class="toDown" >{{x['val']}}</a></li>
+                  {% endfor %}
+                  </ul>
+                  </nav>
+                  </font>
+
+
+
+              </div>
+
+            <div class="content three_quarter" style="color:#000000"  >
+              <font face = "Comic sans MS" size ="3">
+              <h1>{{data['name1']}}</h1><br><br>
+              {%for x in tagdata['allVals']%}
+              <img class="imgr borderedbox inspace-5" src="{{x['imgs']}}" alt="">
+              <font face = "Comic sans MS" size ="2">
+              <p id="unique-identifier">* {{x['names']}}</p>
+              <p>{{x['descrp']}}</p>
+              <p><a href="{{x['ref']}}" target="_blank" name = "link">Procurement Details</a></p>
+              <p><a href="{{x['procure']}}" target="_blank" name = "link">Reference Details </a></p><br><br><br><br><br>
+              {% endfor %}
+
+            </div>
+
+            <!-- / main body -->
+            <div class="clear"></div>
+          </main>
+        </div>
+      </div>
+
+      <div class="wrapper bgded">
+        <div class="lrspace overlay coloured">
+          <div id="cta" class="clear center">
+
+            <!-- <div class="one_quarter first" style="color:#000000">
+              <h5 class="title">Company Details</h5>
+              <font face = "Comic sans MS" size ="2">
+              <address class="btmspace-15"> -->
+                <!-- Ernst & Young LLP<br>
+                Drishya Building, Kinfra Park<br>
+                Kazhakkoottam<br>
+                Trivandrum 695586 -->
+              <!-- </address>
+              <ul class="nospace"> -->
+                <!-- <li class="btmspace-10"><span class="fa fa-phone"></span> 0471 3380808</li> -->
+                <!-- <li><span class="fa fa-envelope-o"></span>  http://www.ey.com </li> -->
+              </ul>
+            </div>
+
+        </div>
+        </div>
+        <div class="wrapper row5">
+        <div class="lrspace">
+          <div id="copyright" class="clear" style="color:#000000">
+            <font face = "Comic sans MS" size ="2">
+
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="" style="color:#000000"></a></p>
+            </div>
+        </div>
+        </div>
+        <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JAVASCRIPTS -->
+        <script src="/static/layout/scripts/jquery.min.js"></script>
+        <script src="/static/layout/scripts/jquery.backtotop.js"></script>
+        <script src="/static/layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

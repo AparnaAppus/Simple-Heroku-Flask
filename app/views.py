@@ -12,6 +12,10 @@ cur = connection.cursor()
 def index():
     return render_template("index.html")
 
+@app.route('/sensor')
+def sensor():
+    return render_template('sensor.html')
+
 @app.route('/asset/<assetType>')
 def about(assetType):
     data = {}
@@ -52,9 +56,54 @@ def about(assetType):
       link['href'] = "#"
       links.append(link)
       link = {}
-      # link['val'] = 'test'
-      # link['href'] = "#"
-      # links.append(link)
+      link = {}
+      link['val'] = 'Sensor tags'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Security tags'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Smart Alarm Motion Sensor'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'UHF RFID Tag'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Long Range UHF RFID reader (ISO18000-6C EPC G2)'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Strain gauge'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'IR Tag'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Vibration Sensor Active Tag'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'GPS Tracker'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'Tamper Proof RFID UHF Windshield Tag for Vehicles (Pack of 50) 110 X 45 mm size'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'UHF RFID Antenna'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
+      link['val'] = 'UHF RFID Key Tag, EPC Gen2 (900MHz)'
+      link['href'] = "#"
+      links.append(link)
       data['links']=links
 
       allVals = []
@@ -118,6 +167,26 @@ def about(assetType):
         link['val'] = 'Muscle Sensor'
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = 'Body position sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Spirometer Sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Snore Sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Glucometer Sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'SPO2 Pulsioximeter Sensor'
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -170,10 +239,6 @@ def about(assetType):
         link['val'] = 'Light sensors(LDR)'
         link['href'] = "#"
         links.append(link)
-        link = {}
-        link['val'] = 'Strain gauge'
-        link['href'] = "#"
-        links.append(link)
         data['links']=links
 
         allVals = []
@@ -221,6 +286,14 @@ def about(assetType):
         link['val'] = 'Soil Temperature and Humidity Sensor SHT20'
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = ' Rain Sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'pH Sensor'
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -258,6 +331,10 @@ def about(assetType):
         links.append(link)
         link = {}
         link['val'] = 'Radar Sensors'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'ODB'
         link['href'] = "#"
         links.append(link)
         data['links']=links
@@ -333,40 +410,6 @@ def about(assetType):
             allVals.append(astag)
             tagdata['allVals']=allVals
 
-    if assetType=='retail':
-        cur.execute("select * from sensorassetlist where category = 'retail'");
-        vals = cur.fetchall()
-        links = []
-        data["name"]="Retail Sensors List"
-        link = {}
-        link['val'] = 'Sensor tags'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Security tags'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Smart Alarm Motion Sensor'
-        link['href'] = "#"
-        links.append(link)
-        data['links']=links
-
-        allVals = []
-
-        data["name1"]="Sensor List"
-
-        for assets in vals:
-            astag = {}
-
-            astag['imgs'] = assets[13]
-            astag['names'] = assets[1]
-            astag['descrp'] = assets[2]
-            astag['ref'] = assets[3]
-            astag['procure'] = assets[4]
-
-            allVals.append(astag)
-            tagdata['allVals']=allVals
 
     if assetType=='home':
         cur.execute("select * from sensorassetlist where category = 'home'");
@@ -456,6 +499,14 @@ def about(assetType):
         link['val'] = 'Pressure Sensor '
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = 'Carbon Monoxide Sensor '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Hydrogen Sulfide Sensor '
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -495,6 +546,22 @@ def about(assetType):
         link['val'] = 'MA244XD standard diode Sensor'
         link['href'] = "#"
         links.append(link)
+        link = {}
+        link['val'] = ' Light Meter'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Multimeter'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Oscilloscope'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Smart Meter'
+        link['href'] = "#"
+        links.append(link)
         data['links']=links
 
         allVals = []
@@ -513,12 +580,240 @@ def about(assetType):
             allVals.append(astag)
             tagdata['allVals']=allVals
 
+    if assetType=='whealth':
+        cur.execute("select * from sensorassetlist where category = 'whealth'");
+        vals = cur.fetchall()
+        links = []
+        data["name"]="Smart Health Wearables"
+        link = {}
+        link['val'] = 'Fitbit'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Withings Blood Pressure'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Viatom Checkme'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Muse headband'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Gymwatch Fitness Tracker'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Jawbone'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Poly Implant Prothse Device'
+        link['href'] = "#"
+        links.append(link)
+        data['links']=links
+
+        allVals = []
+
+        data["name1"]="Sensor List"
+
+        for assets in vals:
+            astag = {}
+
+            astag['imgs'] = assets[13]
+            astag['names'] = assets[1]
+            astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
+            allVals.append(astag)
+            tagdata['allVals']=allVals
+
+    if assetType=='whome':
+        cur.execute("select * from sensorassetlist where category = 'whome'");
+        vals = cur.fetchall()
+        links = []
+        data["name"]="Smart Home Wearables"
+        link = {}
+        link['val'] = 'CURB Home Energy Monitoring System '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Ecobee3 Thermostat with Sensor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Sonos Play'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Philips Hue'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Amazone Echo'
+        link['href'] = "#"
+        links.append(link)
+        data['links']=links
+
+        allVals = []
+
+        data["name1"]="Sensor List"
+
+        for assets in vals:
+            astag = {}
+
+            astag['imgs'] = assets[13]
+            astag['names'] = assets[1]
+            astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
+            allVals.append(astag)
+            tagdata['allVals']=allVals
+
+
     return render_template('assetList.html',data=data,tagdata=tagdata)
 
 @app.route('/industry/industrial')
 def industry():
     # print ("industrial.html")
     return render_template('industrial.html')
+
+@app.route('/wearable')
+def wearable():
+    return render_template('wearable.html')
+
+@app.route('/operation')
+def operation():
+    return render_template('operation.html')
+
+@app.route('/health')
+def health():
+    return render_template('health.html')
+
+
+@app.route('/actuatordirectory')
+def actuatordirectory():
+    return render_template('actuatordir.html')
+
+@app.route('/actuator/<actuatorLists>')
+def actuator(actuatorLists):
+    data = {}
+    tagdata = {}
+    if actuatorLists=='actuator':
+        cur.execute("select * from sensorassetlist where category = 'actuator'");
+        vals = cur.fetchall()
+        links = []
+        data["name"]="Actuators"
+        link = {}
+        link['val'] = 'Servo Motor '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Stepper Motor'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Electric Actuator'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Hydraulic actuators'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Pneumatic actuator'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Thermal or magnetic Actuator'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Mechanical Actuator'
+        link['href'] = "#"
+        links.append(link)
+        data['links']=links
+
+        allVals = []
+
+        data["name1"]="Actuators List"
+
+        for assets in vals:
+            astag = {}
+
+            astag['imgs'] = assets[13]
+            astag['names'] = assets[1]
+            astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
+            allVals.append(astag)
+            tagdata['allVals']=allVals
+
+    return render_template('actuatorlist.html', data=data,tagdata=tagdata)
+
+@app.route('/controllerdirectory')
+def controllerdirectory():
+    return render_template('controllerdir.html')
+
+@app.route('/control/<controllers>')
+def control(controllers):
+    data = {}
+    tagdata = {}
+    if controllers=='controller':
+        cur.execute("select * from sensorassetlist where category = 'controller'");
+        vals = cur.fetchall()
+        links = []
+        data["name"]="Controller"
+        link = {}
+        link['val'] = 'Raspberry Pi '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'NodeMCU'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Particle Photon'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Arduino'
+        link['href'] = "#"
+        links.append(link)
+        data['links']=links
+
+        allVals = []
+
+        data["name1"]="Controller List"
+
+        for assets in vals:
+            astag = {}
+
+            astag['imgs'] = assets[13]
+            astag['names'] = assets[1]
+            astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
+            allVals.append(astag)
+            tagdata['allVals']=allVals
+
+    return render_template('control.html', data=data,tagdata=tagdata)
+
+
+@app.route('/module')
+def module():
+    return render_template('module.html')
+
+
+@app.route('/cloud')
+def cloud():
+    return render_template('cloud.html')
 
 # Webservices
 @app.route('/webhook', methods=['POST'])

@@ -911,8 +911,8 @@ File: Layout CSS
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{text-align:center;}
-#pageintro li{display:block; float:left; width:33%; height:230px; margin:0; padding:0; overflow:hidden;}
-#pageintro li a{display:block; height:100%; padding:60px 50px;color: #000000;}
+#pageintro li{display:block; float:left; width:25%; height:210px; margin:0; padding:0; overflow:hidden;}
+#pageintro li a{display:block; height:100%; padding:50px 30px;color: #000000;}
 #pageintro li i{margin:0; padding:0; opacity:.8;}
 #pageintro li a:hover i{opacity:1;}
 #pageintro li em{display:block; margin-top:20px; font-style:normal; text-transform:uppercase; font-weight:bold;}
@@ -1227,7 +1227,7 @@ table a, #comments a{background-color:inherit;}
 
 	#pageintro{}
 	#pageintro li{height:auto;}
-	#pageintro li a{padding:30px 15px;}
+	#pageintro li a{padding:20px 20px;}
 	#pageintro li i{font-size:36px;}
 	#pageintro li em{display:none;}
 
@@ -1269,7 +1269,7 @@ table a, #comments a{background-color:inherit;}
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
 
-	#pageintro li a{padding:20px 10px;}
+	#pageintro li a{padding:15px 10px;}
 	#pageintro li i{font-size:26px;}
 }
 .fa-beat {
