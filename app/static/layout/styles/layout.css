@@ -912,10 +912,10 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{text-align:center;}
 #pageintro li{display:block; float:left; width:25%; height:210px; margin:0; padding:0; overflow:hidden;}
-#pageintro li a{display:block; height:100%; padding:50px 30px;color: #000000;}
+#pageintro li a{display:block; height:100%; padding:40px 40px;color: #000000;}
 #pageintro li i{margin:0; padding:0; opacity:.8;}
 #pageintro li a:hover i{opacity:1;}
-#pageintro li em{display:block; margin-top:20px; font-style:normal; text-transform:uppercase; font-weight:bold;}
+#pageintro li em{display:block; margin-top:15px; font-style:normal; text-transform:uppercase; font-weight:bold;}
 
 
 /* Content Area
