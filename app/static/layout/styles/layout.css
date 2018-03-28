@@ -911,7 +911,7 @@ File: Layout CSS
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
 #pageintro{text-align:center;}
-#pageintro li{display:block; float:left; width:25%; height:210px; margin:0; padding:0; overflow:hidden;}
+#pageintro li{display:block; float:left; width:25%; height:215px; margin:0; padding:0; overflow:hidden;}
 #pageintro li a{display:block; height:100%; padding:40px 40px;color: #000000;}
 #pageintro li i{margin:0; padding:0; opacity:.8;}
 #pageintro li a:hover i{opacity:1;}
