@@ -337,29 +337,6 @@ def about(assetType):
         link['val'] = 'ODB'
         link['href'] = "#"
         links.append(link)
-        data['links']=links
-
-        allVals = []
-
-        data["name1"]="Sensor List"
-
-        for assets in vals:
-            astag = {}
-
-            astag['imgs'] = assets[13]
-            astag['names'] = assets[1]
-            astag['descrp'] = assets[2]
-            astag['ref'] = assets[3]
-            astag['procure'] = assets[4]
-
-            allVals.append(astag)
-            tagdata['allVals']=allVals
-
-    if assetType=='automotive':
-        cur.execute("select * from sensorassetlist where category = 'auto'");
-        vals = cur.fetchall()
-        links = []
-        data["name"]="Automotive Sensors List"
         link = {}
         link['val'] = 'Throttle Position Sensor'
         link['href'] = "#"
@@ -410,54 +387,7 @@ def about(assetType):
             allVals.append(astag)
             tagdata['allVals']=allVals
 
-
-    if assetType=='home':
-        cur.execute("select * from sensorassetlist where category = 'home'");
-        vals = cur.fetchall()
-        links = []
-        data["name"]="Home Sensors List"
-        link = {}
-        link['val'] = 'Alarm Sensors'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Smart Thermostat'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Video doorbell'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Leak/moisture detection'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Fire/CO detection '
-        link['href'] = "#"
-        links.append(link)
-        link = {}
-        link['val'] = 'Hall effect sensor MH183 '
-        link['href'] = "#"
-        links.append(link)
-        data['links']=links
-
-        allVals = []
-
-        data["name1"]="Sensor List"
-
-        for assets in vals:
-            astag = {}
-
-            astag['imgs'] = assets[13]
-            astag['names'] = assets[1]
-            astag['descrp'] = assets[2]
-            astag['ref'] = assets[3]
-            astag['procure'] = assets[4]
-
-            allVals.append(astag)
-            tagdata['allVals']=allVals
-
+    
     if assetType=='oil':
         cur.execute("select * from sensorassetlist where category = 'oil'");
         vals = cur.fetchall()
@@ -636,6 +566,30 @@ def about(assetType):
         vals = cur.fetchall()
         links = []
         data["name"]="Smart Home Wearables"
+        link = {}
+        link['val'] = 'Alarm Sensors'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Smart Thermostat'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Video doorbell'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Leak/moisture detection'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Fire/CO detection '
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Hall effect sensor MH183 '
+        link['href'] = "#"
+        links.append(link)
         link = {}
         link['val'] = 'CURB Home Energy Monitoring System '
         link['href'] = "#"
