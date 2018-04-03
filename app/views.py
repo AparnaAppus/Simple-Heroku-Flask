@@ -316,7 +316,7 @@ def about(assetType):
         cur.execute("select * from sensorassetlist where category = 'transport'");
         vals = cur.fetchall()
         links = []
-        data["name"]="Transportion Sensors List"
+        data["name"]="Transportion And Automotive Sensors List"
         link = {}
         link['val'] = 'Ladar Sensor'
         link['href'] = "#"
@@ -387,7 +387,7 @@ def about(assetType):
             allVals.append(astag)
             tagdata['allVals']=allVals
 
-    
+
     if assetType=='oil':
         cur.execute("select * from sensorassetlist where category = 'oil'");
         vals = cur.fetchall()
@@ -516,10 +516,6 @@ def about(assetType):
         links = []
         data["name"]="Smart Health Wearables"
         link = {}
-        link['val'] = 'Fitbit'
-        link['href'] = "#"
-        links.append(link)
-        link = {}
         link['val'] = 'Withings Blood Pressure'
         link['href'] = "#"
         links.append(link)
@@ -541,6 +537,14 @@ def about(assetType):
         links.append(link)
         link = {}
         link['val'] = 'Poly Implant Prothse Device'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Pepper Time'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Fitbit'
         link['href'] = "#"
         links.append(link)
         data['links']=links
@@ -565,7 +569,7 @@ def about(assetType):
         cur.execute("select * from sensorassetlist where category = 'whome'");
         vals = cur.fetchall()
         links = []
-        data["name"]="Smart Home Wearables"
+        data["name"]="Smart Automation"
         link = {}
         link['val'] = 'Alarm Sensors'
         link['href'] = "#"
@@ -608,6 +612,30 @@ def about(assetType):
         links.append(link)
         link = {}
         link['val'] = 'Amazone Echo'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Google Assistant'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Jibo Intelligent Home Robot'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'PITTA Transformative Autonomous Drone'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Braava Jet Robotic Mop by iRobot'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'ulo Camera'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'JUNO'
         link['href'] = "#"
         links.append(link)
         data['links']=links
@@ -661,7 +689,7 @@ def actuator(actuatorLists):
         cur.execute("select * from sensorassetlist where category = 'actuator'");
         vals = cur.fetchall()
         links = []
-        data["name"]="Actuators"
+        data["name"]="Actuators List"
         link = {}
         link['val'] = 'Servo Motor '
         link['href'] = "#"
@@ -722,7 +750,7 @@ def control(controllers):
         cur.execute("select * from sensorassetlist where category = 'controller'");
         vals = cur.fetchall()
         links = []
-        data["name"]="Controller"
+        data["name"]="Controllers List"
         link = {}
         link['val'] = 'Raspberry Pi '
         link['href'] = "#"
