@@ -402,11 +402,12 @@ height: 35px;
 .cont {
     position: relative;
     min-height: 66em;
+
 }
 .content {
     position: absolute;
     top: -62px;
-    background-color: #fff;
+    background-color: #FFFFCC;
     padding: 2em;
 }
 .content-top h1{

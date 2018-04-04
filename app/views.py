@@ -656,8 +656,56 @@ def about(assetType):
             allVals.append(astag)
             tagdata['allVals']=allVals
 
+    if assetType=='wsmart':
+        cur.execute("select * from sensorassetlist where category = 'wsmart'");
+        vals = cur.fetchall()
+        links = []
+        data["name"]="Smart Wearables"
+        link = {}
+        link['val'] = 'Smart Shoes'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Smart Glass'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'VR headsets'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Smart Clothing'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'Smart Jewellery'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'NeuroOn'
+        link['href'] = "#"
+        links.append(link)
+        data['links']=links
+
+        allVals = []
+
+        data["name1"]="Sensor List"
+
+        for assets in vals:
+            astag = {}
+
+            astag['imgs'] = assets[13]
+            astag['names'] = assets[1]
+            astag['descrp'] = assets[2]
+            astag['ref'] = assets[3]
+            astag['procure'] = assets[4]
+
+            allVals.append(astag)
+            tagdata['allVals']=allVals
+
 
     return render_template('assetList.html',data=data,tagdata=tagdata)
+
 
 @app.route('/industry/industrial')
 def industry():
@@ -796,6 +844,11 @@ def module():
 @app.route('/cloud')
 def cloud():
     return render_template('cloud.html')
+
+@app.route('/article')
+def article():
+    return render_template('article.html')
+
 
 # Webservices
 @app.route('/webhook', methods=['POST'])
