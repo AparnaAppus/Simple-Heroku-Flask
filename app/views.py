@@ -48,6 +48,10 @@ def about(assetType):
       link['href'] = "#"
       links.append(link)
       link = {}
+      link['val'] = 'Beacons'
+      link['href'] = "#"
+      links.append(link)
+      link = {}
       link['val'] = 'NFC Tags'
       link['href'] = "#"
       links.append(link)
