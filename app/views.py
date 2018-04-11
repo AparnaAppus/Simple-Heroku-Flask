@@ -212,15 +212,15 @@ def about(assetType):
         links = []
         data["name"]="Energy Sensors List"
         link = {}
-        link['val'] = 'Pyroelectric Sensor'
+        link['val'] = 'Pyroelectric Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Photodiode Energy Sensor'
+        link['val'] = 'Photodiode Energy Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'EnergyMax Sensor'
+        link['val'] = 'EnergyMax Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
