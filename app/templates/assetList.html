@@ -103,7 +103,7 @@ Licence URI: http://www.os-templates.com/template-terms
                   <nav class="sdb_holder">
                   <ul>
                   {%for x in data['links']%}
-                  <li class="active"><a href="{{x['href']}}link" class="toDown" >{{x['val']}}</a></li>
+                  <li class="active"><a href="{{x['href']}}{{x['val']}}">{{x['val']}}</a></li>
                   {% endfor %}
                   </ul>
                   </nav>
@@ -117,12 +117,14 @@ Licence URI: http://www.os-templates.com/template-terms
               <font face = "Comic sans MS" size ="3">
               <h1>{{data['name1']}}</h1><br><br>
               {%for x in tagdata['allVals']%}
+              <div id = "{{x['names']}}">
               <img class="imgr borderedbox inspace-5" src="{{x['imgs']}}" alt="">
               <font face = "Comic sans MS" size ="2">
-              <p id="unique-identifier">* {{x['names']}}</p>
+              <p>* {{x['names']}}</p>
               <p>{{x['descrp']}}</p>
               <p><a href="{{x['ref']}}" target="_blank" name = "link">Procurement Details</a></p>
               <p><a href="{{x['procure']}}" target="_blank" name = "link">Reference Details </a></p><br><br><br><br><br>
+            </div>
               {% endfor %}
 
             </div>

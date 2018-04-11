@@ -40,10 +40,6 @@ def about(assetType):
       link['href'] = "#"
       links.append(link)
       link = {}
-      link['val'] = 'RFID transmitter Tag - Active (sunrom)'
-      link['href'] = "#"
-      links.append(link)
-      link = {}
       link['val'] = 'Barcodes'
       link['href'] = "#"
       links.append(link)
