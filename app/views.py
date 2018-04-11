@@ -287,7 +287,7 @@ def about(assetType):
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = ' Rain Sensor'
+        link['val'] = 'Rain Sensor'
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -318,7 +318,7 @@ def about(assetType):
         links = []
         data["name"]="Transportion And Automotive Sensors List"
         link = {}
-        link['val'] = 'Ladar Sensor'
+        link['val'] = 'Leddar Sensor'
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -334,7 +334,7 @@ def about(assetType):
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'ODB'
+        link['val'] = 'OBD'
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -426,7 +426,7 @@ def about(assetType):
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Pressure Sensor '
+        link['val'] = 'Pressure sensor '
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -461,23 +461,23 @@ def about(assetType):
         links = []
         data["name"]="Power Sensors List"
         link = {}
-        link['val'] = 'MA2400xA series thermal Sensors'
+        link['val'] = 'MA2400xA series thermal sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'MA24106A power Sensor'
+        link['val'] = 'MA24106A power sensor'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'MA2411B pulse power Sensor'
+        link['val'] = 'MA2411B pulse power sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'MA244XD standard diode Sensor'
+        link['val'] = 'MA244XD standard diode Sensors'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = ' Light Meter'
+        link['val'] = 'Light Meter'
         link['href'] = "#"
         links.append(link)
         link = {}
