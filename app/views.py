@@ -461,7 +461,7 @@ def about(assetType):
         links = []
         data["name"]="Power Sensors List"
         link = {}
-        link['val'] = 'MA2400xA series thermal sensors'
+        link['val'] = 'MA2400xA series thermal sensors.'
         link['href'] = "#"
         links.append(link)
         link = {}
