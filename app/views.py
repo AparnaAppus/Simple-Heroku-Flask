@@ -739,7 +739,7 @@ def actuator(actuatorLists):
         links = []
         data["name"]="Actuators List"
         link = {}
-        link['val'] = 'Servo Motor '
+        link['val'] = 'Servomotor'
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -751,11 +751,11 @@ def actuator(actuatorLists):
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Hydraulic actuators'
+        link['val'] = 'Hydraulic Actuator'
         link['href'] = "#"
         links.append(link)
         link = {}
-        link['val'] = 'Pneumatic actuator'
+        link['val'] = 'Pneumatic Actuator'
         link['href'] = "#"
         links.append(link)
         link = {}
