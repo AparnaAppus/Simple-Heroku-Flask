@@ -4,7 +4,7 @@
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	
+
 
 }
 .memenu>li.active>a{color:#00405d;}
@@ -46,7 +46,7 @@
 background:#8ce78a;
 color:#fff;
 
-}	
+}
 .skyblue li>a,.skyblue>li.showhide span{color:#6f7887}
 .skyblue>li:hover>a,.skyblue .dropdown li:hover>a{color:#555; background:#ffffff;}.
 skyblue .mepanel img:hover,.skyblue form.contact input[type="text"]:focus,.skyblue form.contact textarea:focus{}
@@ -119,28 +119,26 @@ skyblue .mepanel img:hover,.skyblue form.contact input[type="text"]:focus,.skybl
 /* start memenu colors */
 
 .skyblue li a.color1:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
 .skyblue li a.color2:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
 .skyblue li a.color3:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
 .skyblue li a.color4:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
 .skyblue li a.color8:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
 .skyblue li a.color6:hover{
-	background:#8ce78a;
+	background:#FFDAB9;
 	color: #ffffff;
 }
-	
-

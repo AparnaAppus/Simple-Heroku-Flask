@@ -800,7 +800,7 @@ def control(controllers):
         links = []
         data["name"]="Controllers List"
         link = {}
-        link['val'] = 'Raspberry Pi '
+        link['val'] = 'Raspberry Pi'
         link['href'] = "#"
         links.append(link)
         link = {}
@@ -813,6 +813,10 @@ def control(controllers):
         links.append(link)
         link = {}
         link['val'] = 'Arduino'
+        link['href'] = "#"
+        links.append(link)
+        link = {}
+        link['val'] = 'BeagleBone'
         link['href'] = "#"
         links.append(link)
         data['links']=links
