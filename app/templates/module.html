@@ -4,6 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Connectivity Modules</title>
 	<link rel="shortcut icon" type="image/x-icon" href="/static/layout/assets/images/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/layout/assets/css/style.css"  media="screen" />
 	<link rel="stylesheet" type="text/css" href="/static/layout/assets/css/common.css" media="screen" />
 	<script src="/static/layout/assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -17,6 +19,93 @@
 			});
 		});
 	</script>
+
+<style>
+.nav ul {
+  list-style: none;
+  background-color: #808080;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.0em;
+  line-height: 40px;
+  text-align: left;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding-left: 5px;
+  border-bottom: 1px solid #888;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #fff27f;
+}
+
+.nav a.active {
+  background-color: #000000;
+  color: #808080;
+  cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+  font-size: .5em;
+}
+
+/***************
+   Style menu for larger screens
+
+   Using 650px (130px each * 5 items), but ems
+   or other values could be used depending on other factors
+****************/
+
+@media screen and (min-width: 650px) {
+  .nav li {
+    width: 130px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 0px;
+    font-size: 1.0em;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+  .nav a {
+    border-bottom: none;
+  }
+
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    display: block;
+  }
+}
+</style>
 	<!--[if IE 7]>
 	<link rel="stylesheet" type="text/css" href="assets/css/all-ie.css" />
 <![endif]-->
@@ -30,30 +119,60 @@
       <!--Page-->
       <div class="page shadow">
     <!--Header-->
-    <div id="header">
+		<div id="header">
 
-          <div class="nav-section">
-        <ul class="navigation">
-              <li class="home"><a href="/" class="home">Home </a></li>
-              <li><a href="/module">Connectivity Modules</a></li>
+					<div class="nav-section">
+				<ul class="navigation">
+					<img src="/static/img/eylogo.jpg" width="30px;" height="40px;" alt=""><div style="margin-left: 50px; margin-top: -30px;"><h1><font face = "Arial" size ="5" style="color:#FFFFFF">IoT Asset Directory</font><br></h1></div>
+								<!-- <li class="home"><a href="/" class="home">Home </a></li>
+							<li><a href="/sensor">Sensor Directory</a></li> -->
+							<br>
+						</ul>
 
-            </ul>
-
-      </div>
-        </div>
+						<a href="/"><i class="fa fa-home" style="font-size:25px;color:#ffe600;margin-left:650px;margin-top:20px;"></i></a>
+			</div>
+				</div>
     <!--Header-->
     <!--Content-->
     <div id="content">
           <div class="sidebar">
             <div class="latest-product "><br><br><br><br>
-                  <h2>Connectivity Modules</h2>
-                  <ul class="info"><br><br><br>
-                <li><a href="#">Wireless Fidelity Module</a></li>
-                <li><a href="#">Bluetooth Module</a></li>
-                <li><a href="#">Z-Wave Module</a></li>
-                <li><a href="#">Zigbee Module</a></li>
-                <li><a href="#">GSM Module</a></li>
-								<li><a href="#">LoRa</a></li>
+                  <h2 ><font face = "Arial" size ="4">Connectivity Modules</font></h2>
+                  <ul class="info nav"><br>
+										<li>
+		                        <a href="#"> Short Range</a>
+		                        <ul class="nav nav-second-level">
+		                            <li>
+		                                <a href="">Bluetooth</a>
+		                            </li>
+		                            <li>
+		                                <a href="">Zigbee</a>
+		                            </li>
+		                           </ul>
+		                      </li>
+													<li>
+					                        <a href="#">Medium Range</a>
+					                        <ul class="nav nav-second-level">
+					                            <li>
+					                                <a href="">WiFi</a>
+					                            </li>
+
+					                           </ul>
+					                      </li>
+																<li>
+								                        <a href="#">Long Range</a>
+								                        <ul class="nav nav-second-level">
+								                            <li>
+								                                <a href="">LoRa</a>
+								                            </li>
+								                            <li>
+								                                <a href="">GSM Module</a>
+								                            </li>
+																						<li>
+								                                <a href="">Z-Wave Module</a>
+								                            </li>
+								                           </ul>
+								                      </li>
               </ul>
                   </div>
 
@@ -68,9 +187,9 @@
 
                   <div class="imgeslider" ><img src="/static/layout/assets/images/lapy.jpg" alt="lapy" title="product" />
 
-                <div class="banner-text" ><br><br>
-                      <h1><font face = "Times New Roman" size ="6">Connectivity Modules</font></h1><br><br>
-                      <span><font face = "Times New Roman" size ="3">
+                <div class="banner-text" >
+                      <h1><font face = "Arial" size ="5">Connectivity Modules</font></h1><br>
+                      <span><font face = "Arial" size ="3">
                       The Internet of Things (IoT) is revolutionizing and improving the way we work and live but
                       it's only possible with pervasive,
                       flexible and long-lived wireless connectivity.
@@ -87,7 +206,7 @@
         <div class="product-des"><br><br>
               <div class="product-info"><img src="/static/layout/assets/images/module1.jpg" alt="" title="" />
             <h2>WiFi Module</h2>
-            <div class="add"><span><font face = "Times New Roman" size ="2" style="color:#089067">The ESP8266 WiFi Module is a self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network.<br><br></font></span><a href="https://www.amazon.in/ESP8266-Serial-Wireless-Transceiver-Module/dp/B00O34AGSU?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=b370ffbd-2306-4b2d-a54c-cda384ba17f7" target="_blank">Procure Link</a></div>
+            <div class="add"><span><font face = "Arial" size ="2" style="color:#089067">The ESP8266 WiFi Module is a self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network.<br><br></font></span><a href="https://www.amazon.in/ESP8266-Serial-Wireless-Transceiver-Module/dp/B00O34AGSU?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=b370ffbd-2306-4b2d-a54c-cda384ba17f7" target="_blank">Procure Link</a></div>
             <div class="add-to-list">
                   <ul>
                 <li><a href="https://www.sparkfun.com/products/13678" target="_blank">Refer Link</a></li>
@@ -96,7 +215,7 @@
           </div>
               <div class="product-info"><img src="/static/layout/assets/images/module2.jpg" alt="" title="" />
             <h2>Bluetooth Module</h2>
-            <div class="add"><span><font face = "Times New Roman" size ="2" style="color:#089908">Bluetooth is a wireless technology standard for exchanging data over short distances from fixed and mobile devices, and building personal area networks (PANs).</font></span><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwifgpyE3IzaAhXLIysKHQCKCtwYABABGgJzZg&ohost=www.google.co.in&cid=CAASEuRoWmd_X284BpZRmYvhdtdmEA&sig=AOD64_1TglPgjyNDgQ6lppIVWbMBr0dDTw&ctype=5&q=&ved=0ahUKEwj-r5eE3IzaAhUDu48KHY9UBGwQ9aACCC4&adurl=" target="_blank">Procure Link</a></div>
+            <div class="add"><span><font face = "Arial" size ="2" style="color:#089908">Bluetooth is a wireless technology standard for exchanging data over short distances from fixed and mobile devices, and building personal area networks (PANs).</font></span><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwifgpyE3IzaAhXLIysKHQCKCtwYABABGgJzZg&ohost=www.google.co.in&cid=CAASEuRoWmd_X284BpZRmYvhdtdmEA&sig=AOD64_1TglPgjyNDgQ6lppIVWbMBr0dDTw&ctype=5&q=&ved=0ahUKEwj-r5eE3IzaAhUDu48KHY9UBGwQ9aACCC4&adurl=" target="_blank">Procure Link</a></div>
             <div class="add-to-list ">
                   <ul>
                 <li><a href="https://en.wikipedia.org/wiki/Bluetooth" target="_blank">Refer Link</a></li>
@@ -105,7 +224,7 @@
           </div>
               <div class="product-info last-p"><img src="/static/layout/assets/images/module3.jpg" alt="ipod-tuch" title="product" />
             <h2> Z-Wave Module</h2>
-            <div class="add"><span><font face = "Times New Roman" size ="2" style="color:#080090">The wireless mesh network technology automatically routes the RF signal from one Z-Wave node to the next, around obstacles and radio dead spots, resulting in high reliability.<br></font></span><a href="https://www.amazon.in/Control-Individually-external-SmartThings-Inovelli/dp/B01K6J1Y1I" target="_blank">Procure Link</a></div>
+            <div class="add"><span><font face = "Arial" size ="2" style="color:#080090">The wireless mesh network technology automatically routes the RF signal from one Z-Wave node to the next, around obstacles and radio dead spots, resulting in high reliability.<br></font></span><a href="https://www.amazon.in/Control-Individually-external-SmartThings-Inovelli/dp/B01K6J1Y1I" target="_blank">Procure Link</a></div>
             <div class="add-to-list ">
                   <ul>
                 <li><a href="https://www.digikey.com/catalog/en/partgroup/z-wave-modules/32174" target="_blank">Refer Link</a></li>
@@ -116,7 +235,7 @@
         <div class="product-des">
               <div class="product-info"><img src="/static/layout/assets/images/module4.jpg" alt="lapy" title="product" class="lapy" />
             <h2>Xbee Module</h2>
-            <div class="add"><span><font face = "Times New Roman" size ="2" style="color:#088890">Digi XBee is the brand name of a family of form factor compatible radio modules from Digi International.<br><br><br></font></span><a href="https://robu.in/product/xbee-series-2/?gclid=EAIaIQobChMIlcP1ldyM2gIV2hwrCh0UrQ9dEAQYASABEgK9KvD_BwE"target="_blank">Procure Link</a></div>
+            <div class="add"><span><font face = "Arial" size ="2" style="color:#088890">Digi XBee is the brand name of a family of form factor compatible radio modules from Digi International.<br><br><br></font></span><a href="https://robu.in/product/xbee-series-2/?gclid=EAIaIQobChMIlcP1ldyM2gIV2hwrCh0UrQ9dEAQYASABEgK9KvD_BwE"target="_blank">Procure Link</a></div>
             <div class="add-to-list">
                   <ul>
                 <li><a href="https://en.wikipedia.org/wiki/XBee" target="_blank">Refer Link</a></li>
@@ -125,7 +244,7 @@
           </div>
               <div class="product-info"><img src="/static/layout/assets/images/module5.jpg" alt="g-camera" title="product" class="lapy" />
             <h2>GSM Module</h2>
-            <div class="add"><span><font face = "Times New Roman" size ="2" style="color:#098767">GSM is an open and digital cellular technology used for transmitting mobile voice and data services operates at the 850MHz, 900MHz, 1800MHz and 1900MHz frequency bands.</font></span><a href="https://www.ebay.in/itm/302655326004?aff_source=Sok-Goog" target='_blank'>Procure Link</a></div>
+            <div class="add"><span><font face = "Arial" size ="2" style="color:#098767">GSM is an open and digital cellular technology used for transmitting mobile voice and data services operates at the 850MHz, 900MHz, 1800MHz and 1900MHz frequency bands.</font></span><a href="https://www.ebay.in/itm/302655326004?aff_source=Sok-Goog" target='_blank'>Procure Link</a></div>
             <div class="add-to-list ">
                   <ul>
                 <li><a href="https://www.elprocus.com/gsm-architecture-features-working/" target="_blank">Refer Link</a></li>
@@ -135,7 +254,7 @@
           </div>
 					<div class="product-info last-p"><br><br><img src="/static/layout/assets/images/controller6.jpg" alt="" title="product" />
 				<h2>LoRa</h2><br>
-				<div class="add"><span><font face = "Times New Roman" size ="2" style="color:#080090">LoRa is a long range, low power wireless platform is the prevailing technology choice for building IoT networks worldwide.</font></span><a href="https://www.amazon.in/Module-Breakout-Sx1278-Wireless-Transceiver/dp/B079NMXD9P?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=b370ffbd-2306-4b2d-a54c-cda384ba17f7" target='_blank'>Procure Link</a></div>
+				<div class="add"><span><font face = "Arial" size ="2" style="color:#080090">LoRa is a long range, low power wireless platform is the prevailing technology choice for building IoT networks worldwide.</font></span><a href="https://www.amazon.in/Module-Breakout-Sx1278-Wireless-Transceiver/dp/B079NMXD9P?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=b370ffbd-2306-4b2d-a54c-cda384ba17f7" target='_blank'>Procure Link</a></div>
 				<div class="add-to-list ">
 							<ul>
 						<li><a href="https://www.semtech.com/technology/lora/what-is-lora" target="_blank">Refer Link..</a></li>
@@ -166,8 +285,8 @@
         <div class="f-nav-section">
 					<div class="copyright">
 								<ul><center>
-							<li><font face = "Times New Roman" size ="2" style="color:#FFFFFF">&copy; 2018 </li>
-							<li<font face = "Times New Roman" size ="2" style="color:#FFFFFF">All Rights Reserve|</li></font>
+							<li><font face = "Arial" size ="2" style="color:#FFFFFF">&copy; 2018 </li>
+							<li<font face = "Arial" size ="2" style="color:#FFFFFF">All Rights Reserve|</li></font>
 						</center>	</ul>
 							</div>
 
